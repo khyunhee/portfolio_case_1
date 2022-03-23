@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./css/sub1.css">
+</head>
+<body>
+    <div class="contact">
+        <form class="gform form-elements" name="contactUs" methods="post" action="https://script.google.com/macros/s/AKfycbyIY7s-8o54tsplw5YvgpBfhwoVNeeXOj4D7dO_/exec">
+            <fieldset>
+                <legend>CONTACT</legend>
+                <div class="formlist">
+                    <ul>
+                        <li>
+                            <label for="name">이름(or 회사명)<sup>*</sup></label>
+                            <sapn class="inputbox">
+                                <input type="text" id="name" name="name" placeholder="이름(or 회사명) 입력" required autocomplete="off">
+                            </sapn>
+                        </li>
+                        <li>
+                            <label for="email">답변 받을 이메일</label>
+                            <sapn class="inputbox">
+                                <input type="email" id="email" name="email" placeholder="ex) abc@google.com" required autocomplete="off">
+                            </sapn>
+                        </li>
+                        <li>
+                            <label for="message">문의 내용</label>
+                            <sapn class="inputbox">
+                                <textarea name="message" id="message" placeholder="문의사항을 입력해 주세요."></textarea>
+                            </sapn>
+                        </li>
+                    </ul>
+                    <div class="btn_box">
+                        <button type="submit" class="command_btn">문의하기</button>
+                    </div>
+                </div>
+
+                <div class="thankyou_message">
+                    <article>
+                        <h1>메일이 전송되었습니다.</h1>
+                        <p>확인 후 연락드리겠습니다.</p>
+                        <div class="btn_box">
+                            <a href="" class="close">close</a>
+                        </div>
+                    </article>
+                </div>
+            </fieldset>
+        </form>
+        <span class="comment">작성하신 내용은 실제 메일로 전송됩니다.</span>
+    </div>
+
+
+    <script src="./js/form-submission-handler.js"></script>
+    <script src="./js/sub1.js"></script>
+</body>
+</html>
