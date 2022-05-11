@@ -133,16 +133,7 @@ header a {
     width: calc(100% - 120px); height: 1px;
     bottom: 80%; left: 60px;
     background-color: #fff;
-    /*animation: lineAni 3s linear forwards;*/
 }
-/*@keyframes lineAni {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: calc(100% - 120px);
-    }
-}*/
 
 .main_container .main {
     display: flex;
@@ -191,18 +182,6 @@ header a {
     justify-content: space-between;
     align-items: center;
     /* border-top: 1px solid #fff; */
-}
-.bottom h3 {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-family: var(--font-secondary);
-    font-weight: 300;
-}
-.bottom .bottom_l {
-    float: left;
-}
-.bottom .bottom_r {
-    float: right;
 }
 
 /* rotating circle */
@@ -255,7 +234,7 @@ header a {
 
 /*=================== about ===================*/
 .about {
-    padding: 180px 0 180px;
+    padding: 80px 0 180px;
     width: 100%;
     position: relative;
     
@@ -628,3 +607,276 @@ header a {
     text-align: center;
 }
 
+
+
+@media screen and (max-width:1400px) {
+
+/*=================== hero ===================*/
+.hero {
+    padding: 5px 0 0;    
+}
+.main_container .main h1 {
+    font-size: 6rem;
+    letter-spacing: 1.15px;
+}
+.main_container .main #stroke {
+    -webkit-text-stroke-width: 1px;
+}
+
+/* nav size */
+.nav_l .logo h3 {
+    font-size: 1.85rem;
+    letter-spacing: 1.5px;
+}  
+.nav_r .menu ul a {
+    letter-spacing: 1.5px;
+    font-size: .9rem;
+}
+
+/* rotating circle */
+.bottom #circle_in span {
+    font-size: 17px;
+}
+
+/*=================== text banner ===================*/
+.txt_banner {
+    margin-top: 80px;
+}
+
+.txt_banner .txt_box .letter {
+    font-size: 4rem;
+}
+.txt_banner .txt_box .letter  #stroke {
+    -webkit-text-stroke-width: 1px;
+}
+
+
+
+/*=================== about ===================*/
+.about {
+    padding: 80px 0 180px; 
+}
+.about .about_wrap {
+    padding: 0 40px;
+}
+
+.about .about_cont .cont_l .cont_title {
+    font-size: 5rem;
+    padding-bottom: 40px;
+}
+.about .about_cont .cont_l p {
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 13px;
+}
+
+#aboutArrow {
+    width: 20px;
+    stroke-width: 1px;
+}
+
+.about .about_cont .cont_r .skill_title {
+    font-size: 2.25rem;
+    padding: 0 0 40px;
+}
+
+.about .about_cont .cont_r .skill_container {
+    padding: 15px 30px;
+}
+
+.skill_container .skill_box {
+    margin-bottom: 10px;
+}
+.skill_container .skill_box h3 {
+    font-size: .8rem;
+}
+
+/*=================== work ===================*/
+.work {
+    padding: 80px 60px;
+}
+
+.work .work_left .work_case {
+    padding: 15px;
+}
+.work .work_left .work_case h1{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    padding-bottom: 18px;
+}
+.work .work_left .work_case span {
+    font-size: .95rem;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+.work .work_left .work_case h3{
+    font-size: .9rem;
+    padding-bottom: 30px;
+}
+.work .work_left .work_case p {
+    font-size: .9rem;
+}
+
+.work .work_left .work_case .work_icon {
+    padding-top: 18px;
+}
+.work .work_left .work_case .work_icon a {
+    font-size: 1rem;
+}
+#workArrow {
+    width: 25px;
+    stroke-width: 1px;
+}
+
+.work .work_right {
+    padding-left: 30px;
+}
+.work .work_right video {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+/*=================== contact ===================*/
+.contact {
+    width: 100%; height: 100vh;
+    padding: 80px 60px;
+}
+.contact .contact_main .contact_heading a:before {
+    width: 100%; height: 3px;
+    transform: translateY(180px);
+}
+
+.contact .contact_main .contact_heading a h1 {
+    font-size: 6rem;
+}
+.contact .contact_main .contact_heading a h1:nth-child(3) {
+    padding-bottom: 20px;
+}
+
+.contact .contact_main .address {
+    padding-bottom: 30px;
+}
+.contact .contact_main .address .adress_ps h3 {
+    font-size: .9rem;
+}
+.contact .contact_main .address_mail a {
+    font-size: .9rem;
+}
+.contact .contact_main .cont_circle {
+    width: 125px; height: 125px;
+}
+
+.contact .contact_main .cont_circle .circle_inner .typing {
+    font-size: .9rem;
+}
+
+#circleArrow {
+    transform: translate(40%, -20%);
+}
+
+.contact .contact_bottom p {
+    font-size: .85rem;
+    letter-spacing: 1px;
+}
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    /*=================== hero ===================*/
+    .main_container .main h1 {
+        font-size: 4.85rem;
+        letter-spacing: 1.5px;
+    }
+    
+    /* nav size */
+    .nav_l .logo h3 {
+        font-size: 1.5rem;
+    }  
+    .nav_r .menu ul a {
+        font-size: .85rem;
+    }
+    
+    /* rotating circle */
+    .bottom #circle_in span {
+        font-size: 16px;
+    }
+    
+    /*=================== about ===================*/
+    .about {
+        padding: 140px 0 100px; 
+    }
+    .about .about_cont .cont_l p {
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    
+    .about .about_cont .cont_r .skill_container {
+        padding: 15px 20px;
+        margin-left: 20px;
+    }
+    
+    .skill_container .skill_box {
+        margin-bottom: 13px;
+    }
+
+    
+    /*=================== work ===================*/
+    .work {
+        padding: 80px 60px;
+    }
+    
+    .work .work_left .work_case {
+        padding: 10px;
+    }
+    .work .work_left .work_case p {
+        font-size: .85rem;
+    }
+
+    .work .work_left .work_case .work_icon {
+        padding-top: 18px;
+    }
+
+    .work .work_right {
+        padding-left: 10px;
+    }
+    .work .work_right video {
+        width: 80%;
+    }
+
+    
+    /*=================== contact ===================*/
+    .contact {
+        padding: 80px 0;
+    }
+
+    .contact .contact_main .contact_heading a:before {
+        transform: translateY(230px);
+    }
+    
+    .contact .contact_main .contact_heading a h1 {
+        font-size: 5rem;
+    }
+
+    .contact .contact_main .address .adress_ps h3,
+    .contact .contact_main .address_mail a,
+    .contact .contact_main .cont_circle .circle_inner .typing {
+        font-size: .8rem;
+    }
+
+    .contact .contact_main .cont_circle {
+        width: 120px; height: 120px;
+    }
+    
+    #circleArrow {
+        transform: translate(40%, -20%);
+    }
+    
+    .contact .contact_bottom p {
+        padding-bottom: 5px;
+        font-size: .8rem;
+
+    }

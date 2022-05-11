@@ -1,27 +1,21 @@
 /*--------------ROTATING CIRCLE------------------*/
-$(document).ready(function(){
+$(document).ready( () => {
     //Auto Radius
     new CircleType(document.getElementById("circle_in"));
-
-    // //반응형 적용
-    // var demo4 = new CircleType(document.getElementById("circle_in"));
-	// window.addEventListener('onresize', function updateRadius() {  
-	//   demo4.radius(demo4.element.offsetWidth / 2);
-	// });
-	// updateRadius();
 });
 
 
 
 /*--------------MOUSE CURSOR------------------*/
-const cursor = document.querySelector("#cursor");
-//확장 좌표
-const touch = document.querySelectorAll("a");
+const cursor = document.querySelector('#cursor');
+//확장시킬 범위
+const touch = document.querySelectorAll('a');
 
-//마우스 좌표 확인
-document.addEventListener("mousemove", (e) => {
-    let x = e.pageX,
-        y = e.pageY;    
+//마우스를 이동 시키면
+$(window).on('mousemove', (e) => {
+
+    let x = e.pageX, // 현재 x좌표
+        y = e.pageY; // 현재 y좌표     
         //console.log(x, y);
 
     //이동 방향과 커서 일치
@@ -29,16 +23,20 @@ document.addEventListener("mousemove", (e) => {
     cursor.style.top = `${y}px`;
 });
 
-//마우스를 올릴 시 확장 실행
-touch.forEach((tou) => {
-    tou.addEventListener("mouseover", () => {
-        cursor.style.transform ="scale(2.5)";
-        cursor.style.animationName = "borderAni";
+
+touch.forEach( (tou) => {
+    // 마우스를 올리면
+    tou.addEventListener('mouseover', () => {
+        // 확장과 애니메이션 실행
+        cursor.style.transform ='scale(2.5)';
+        cursor.style.animationName = 'borderAni';
     
     });
-    tou.addEventListener("mouseleave", () => {
-        cursor.style.transform ="";
-        cursor.style.animationName = "";
+    // 마우스를 떼면
+    tou.addEventListener('mouseleave', () => {
+        // 원래대로
+        cursor.style.transform = '';
+        cursor.style.animationName = '';
         
     });
 });
@@ -47,10 +45,11 @@ touch.forEach((tou) => {
 
 /*--------------TEXT BANNER------------------*/
 let scroll = window.scrollY / 1;
+
 const moveScroll = () => {
     scroll = window.scrollY / 1.5;
-    document.getElementById("textBanner1").style.transform = "translateX(-"+scroll+"px)";
-    document.getElementById("textBanner2").style.transform = "translateX(-"+scroll+"px)";
+    $("#textBanner1").css('transform', `translateX(-${scroll}px)`);
+    $("#textBanner2").css('transform', `translateX(-${scroll}px)`);
 }
 setInterval(moveScroll, 1);
 
@@ -58,16 +57,25 @@ setInterval(moveScroll, 1);
 
 /*--------------TYPING------------------*/
 const typed = new Typed(".typing", {
-
-    strings : ["or... let's back to the beginning!"], //브라우저에 띄울 문구
-    stringsElement : null,  //초기 공간을 비운다.
-    typeSpeed : 100,  //타이핑 속도
-    backSpeed : 100,  //backspace 속도
-    startDelay : 1000,  //최초 타이핑 시간을 1초만큼 지연
-    backDelay : 1000,  //이전 문장을 모두 타이핑하고 1초 후 backspace가 진행되도록 구성
+    
+    //브라우저에 띄울 문구
+    strings : ["or... let's back to the beginning!"], 
+    //초기 공간은 공백으로
+    stringsElement : null,  
+    //타이핑 속도
+    typeSpeed : 100,  
+    //backspace 속도
+    backSpeed : 100,  
+    //최초 타이핑 시간 1초 지연
+    startDelay : 1000,  
+    //문장 모두 타이핑하고 1초 후 backspace가 진행되도록 구성
+    backDelay : 1000,  
+    //반복
     loop : true, 
+    //커서 보이기
     showCursor : true,
-    cursorChar : "|"  //커서 모양
+    //커서 모양
+    cursorChar : "|"  
   });
 
 
@@ -152,9 +160,9 @@ gsap.from('.about_cont .cont_l h1', {
     stagger: .2,
     opacity: 0
 }); 
-gsap.from('.about_cont .cont_l h5', {
+gsap.from('.about_cont .cont_l p', {
     scrollTrigger: {
-        trigger: '.about_cont .cont_l h5'
+        trigger: '.about_cont .cont_l p'
     },
     y: -30,
     duration: .3,
@@ -200,42 +208,31 @@ gsap.from('.work_right', {
 
 
 /*--------------#about에서 헤더 텍스트 색상 변경-----------------*/
-$(function(){
-    $(window).scroll(function(){
-        const $scrollY = $(this).scrollTop();
+$(window).scroll( () => {
 
-        if(scrollY >= 1300 && scrollY < 2300) {
+    // 현재 높이 변수로 설정
+    const height = $(window).scrollTop();
+    console.log(height);
 
-            $('header a').addClass('txtColor');
-        
-        }else{
-            $('header a').removeClass('txtColor');
-        }
-    });
+    // 스크롤이 about section에 있는 동안
+    if(height >= 900 && height < 1900) {
+        // 텍스트 색상 변경
+        $('header a').addClass('txtColor');
+        // 아닐 경우 원래대로
+    }else{
+        $('header a').removeClass('txtColor');
+    }
+
 });
+
 
 
 /*--------------SCROLL TOP-----------------*/
-const scrollTopBtn = document.querySelector("#top_btn");
+// 스크롤 버튼 
+const scrollTopBtn = $('#top_btn');
 
-scrollTopBtn.addEventListener("click", function(){
-    $("html, body").animate({ scrollTop: 0}, "slow");
+// 버튼을 클릭하면
+scrollTopBtn.on('click', () => {
+    // 스크롤바 위치를 0으로 천천히 이동
+    $('html, body').animate({ scrollTop: 0}, 'slow');
 });
-
-
-
-//   const scrollTxt = document.querySelector(".scroll_position");
-
-// window.addEventListener("scroll", function(){
-//     let scrollLocation = window.scrollY;
-//     console.log(scrollLocation);
-//     //scrollTxt.textContent = scrollLocation;
-// });
-
-// const resizeEvt = function(){
-//     // console.log("resize 이벤트 발생");
-//     const 
-// }
-
-// resizeEvt(); 
-// window.onresize = resizeEvt; 
