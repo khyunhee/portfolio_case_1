@@ -818,14 +818,23 @@ header a {
     
     /*=================== work ===================*/
     .work {
-        padding: 80px 60px;
+        padding: 80px 60px 10px;
+        grid-template-columns: none;
+        grid-gap: 20px;
+    }
+    
+    .work .work_left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
     
     .work .work_left .work_case {
-        padding: 10px;
+        padding: 0;
     }
     .work .work_left .work_case p {
         font-size: .85rem;
+        line-height: 1.5;
     }
 
     .work .work_left .work_case .work_icon {
@@ -868,7 +877,7 @@ header a {
     }
     
     .contact .contact_bottom p {
-        padding-bottom: 5px;
+        padding-bottom: 30px;
         font-size: .8rem;
 
     }
