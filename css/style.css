@@ -266,6 +266,7 @@ header a {
     margin-bottom: 13px;
     font-weight: 500;
     font-family: var(--font-kor);
+    word-break: keep-all;
 }
 .about .about_cont .cont_l .about_link {
     display: flex;
@@ -663,9 +664,8 @@ header a {
     padding-bottom: 40px;
 }
 .about .about_cont .cont_l p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 2;
-    word-break: keep-all;
     margin-bottom: 13px;
 }
 
@@ -688,6 +688,10 @@ header a {
 }
 .skill_container .skill_box h3 {
     font-size: .8rem;
+}
+.work .work_right img {
+    width: 80%;
+    margin: 0 auto;
 }
 
 
