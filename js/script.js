@@ -212,7 +212,7 @@ $(window).scroll( () => {
 
     // 현재 높이 변수로 설정
     const height = $(window).scrollTop();
-    console.log(height);
+    //console.log(height);
 
     // 스크롤이 about section에 있는 동안
     if(height >= 900 && height < 1900) {
